@@ -1,0 +1,195 @@
+body {
+  background-color: #cfcfcf;
+}
+p {
+  margin: 0px;
+  color: #111111;
+}
+
+input {
+  padding: 7px;
+  margin: 5px 0px;
+  border-radius: 6px;
+  background-image: url("img/search.svg");
+  background-position: 2px;
+  width: 300px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  height: 20px;
+  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%),
+    0 1px 1.5px 0 rgb(0 0 0 / 5%);
+}
+input::placeholder {
+  font-size: 14px;
+}
+input:focus {
+  /* border: 8px solid #f7d344; */
+  border-radius: 6px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-section {
+  margin: 10px;
+  flex-grow: inherit;
+  background-image: url(img/background-gradient.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  padding: 20px 40px;
+  flex: 1;
+}
+.first-section-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.panel {
+  padding: 0px 20px;
+  margin: 10px 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  align-items: center;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.panel-weather-img {
+  width: 70px;
+  height: 70px;
+}
+
+.humidity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.humidity img {
+  width: 30px;
+  height: 30px;
+}
+
+.location {
+  display: flex;
+}
+
+.location p {
+  font-family: "Neue Montreal-Regular", Helvetica;
+  font-weight: 300;
+  font-size: 16px;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 30px 20px;
+  background-color: #cfcfcf;
+}
+
+.list img {
+  width: 30px;
+  height: 30px;
+}
+.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 10px;
+}
+
+.fourth-section {
+  display: flex;
+  flex-direction: column;
+}
+.suggestions {
+  padding: 20px 40px;
+  margin: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 2px 3px rgba(0, 0, 0, 0.23);
+}
+.suggestions p {
+  font-size: 28px;
+}
+
+.checking{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+}
+
+.catergories {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Three columns with equal width */
+  grid-gap: 10px;
+}
+
+.catergory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+}
+.catergory-text {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+
+#degree {
+  font-family: "Neue Montreal-Bold", Helvetica;
+  font-weight: 700;
+  color: #111111;
+
+  font-size: 72px;
+  white-space: nowrap;
+}
+#description {
+  font-weight: 500;
+  color: #111111;
+  font-size: 32px;
+
+  white-space: nowrap;
+}
+
+#weather-nav {
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #111111;
+  font-size: 36px;
+  letter-spacing: -2.52px;
+  line-height: normal;
+}
+
+#weather-img {
+  width: 150px;
+  height: 150px;
+}
