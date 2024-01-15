@@ -1,9 +1,21 @@
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("fonts\\Neue Montreal\\NeueMontreal-Bold.otf") format("otf"),
+    url("fonts\\Neue Montreal\\NeueMontreal-Light.otf") format("otf"),
+    url("fonts\\Neue Montreal\\NeueMontreal-Medium.otf") format("otf"),
+    url("fonts\\Neue Montreal\\NeueMontreal-Regular.otf") format("otf");
+  /* Add more formats if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  background-color: #cfcfcf;
+  background-color: #83b8fa;
+  font-family: "Neue Montreal", Helvetica;
 }
 p {
   margin: 0px;
-  color: #111111;
+  color: #f4fbfa;
 }
 
 input {
@@ -19,7 +31,7 @@ input {
   font-size: 16px;
   border: 2px solid transparent;
   height: 20px;
-  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%),
+  box-shadow: 0 0 0 1px #f4fbfa, 0 2px 4px 0 rgb(0 0 0 / 7%),
     0 1px 1.5px 0 rgb(0 0 0 / 5%);
 }
 input::placeholder {
@@ -38,12 +50,15 @@ input:focus {
 .first-section {
   margin: 10px;
   flex-grow: inherit;
-  background-image: url(img/background-gradient.png);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+
+  /* background-image: url(img/background-gradient.png); */
+  background-color: #68a9f9;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   border-radius: 6px;
-  padding: 20px 40px;
+  padding: 20px 20px;
   flex: 1;
 }
 .first-section-flex {
@@ -61,8 +76,10 @@ input:focus {
 .panel {
   padding: 0px 20px;
   margin: 10px 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
   align-items: center;
+  border-radius: 6px;
+  background-color: #68a9f9;
 
   display: flex;
   justify-content: space-evenly;
@@ -73,13 +90,17 @@ input:focus {
   height: 70px;
 }
 
+.panel-degree {
+  font-size: 22px;
+}
+
 .humidity {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.humidity img {
+.length img {
   width: 30px;
   height: 30px;
 }
@@ -89,8 +110,8 @@ input:focus {
 }
 
 .location p {
-  font-family: "Neue Montreal-Regular", Helvetica;
-  font-weight: 300;
+  font-family: "Neue Montreal", Helvetica;
+  font-weight: 400;
   font-size: 16px;
 }
 .bottom {
@@ -101,91 +122,119 @@ input:focus {
 .third-section {
   display: flex;
   flex-direction: column;
+  border-radius: 6px;
+  background-color: #68a9f9;
+  justify-content: space-evenly;
+
   flex: 1;
   margin: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  padding: 30px 20px;
-  background-color: #cfcfcf;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
 }
 
+.third-section p {
+  font-family: "Neue Montreal", Helvetica;
+  font-size: 18px;
+}
 .list img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 .list {
+  border-radius: 6px;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: 20px 10px;
+  margin: 10px 10px;
+}
+.list-text {
+  width: 80px;
 }
 
 .fourth-section {
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }
 .suggestions {
+  border-radius: 6px;
+  background-color: #68a9f9;
+
   padding: 20px 40px;
-  margin: 10px;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 2px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .suggestions p {
-  font-size: 28px;
+  font-size: 22px;
+  font-family: "Neue Montreal", Helvetica;
 }
 
-.checking{
+.checking {
   display: flex;
   flex-direction: row;
   gap: 10px;
   padding: 10px;
 }
+.checking img {
+  width: 10px;
+}
 
 .catergories {
-  margin: 10px;
+  margin: 10px 0px 0px 0px;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Three columns with equal width */
   grid-gap: 10px;
 }
 
 .catergory {
+  border-radius: 6px;
+  background-color: #68a9f9;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
   padding: 20px;
 }
 .catergory-text {
   align-items: center;
   display: flex;
   padding: 10px;
+  font-weight: 500;
   flex-direction: column;
+  font-family: "Neue Montreal", Helvetica;
+  font-size: 18px;
 }
 
 #degree {
-  font-family: "Neue Montreal-Bold", Helvetica;
+  font-family: "Neue Montreal", Helvetica;
   font-weight: 700;
-  color: #111111;
-
-  font-size: 72px;
+  font-size: 62px;
+  height: 62px;
   white-space: nowrap;
+  color: #f4fbfa;
 }
+
 #description {
+  font-family: "Neue Montreal", Helvetica;
+  color: #f4fbfa;
   font-weight: 500;
-  color: #111111;
   font-size: 32px;
 
   white-space: nowrap;
 }
 
 #weather-nav {
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #111111;
+  font-family: "Neue Montreal", Helvetica;
+  font-weight: 500;
+  color: #f4fbfa;
   font-size: 36px;
-  letter-spacing: -2.52px;
+  letter-spacing: -0.5px;
+  margin: 0px 10px;
   line-height: normal;
 }
 
