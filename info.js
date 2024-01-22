@@ -23,9 +23,18 @@ const LogInSchema = new mongoose.Schema({
 const collection = new mongoose.model("Collection1",LogInSchema);
 
 const WeatherSchema = new mongoose.Schema({
+ // user:{
+ //  type: mongoose.Schema.Types.ObjectId,
+ //  ref: 'Collection1',
+ //  required: true,
+ // },
   date: {
-    type: Date,
-    default: Date.now,
+    type: String,
+    required:true,
+  },
+  location:{
+    type: String,
+    required: false
   },
   temperature: {
     type: Number,
